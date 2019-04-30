@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JS vezbe 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/stil.css" />
+    <script src="js/skripta.js"></script>
+</head>
+
+<body>
+	
+<!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS--><!--EKSTERNI JS-->
+<div class="inlinejavascript">POZIVANJE FUNKCIJA IZ JS:</div>
+  	
+	
+	
+	<!--Spoj 2 niza i iz spojenog niza izvuci odredjene elemente-->
+		<h3>Spoj 2 niza i iz spojenog niza izvuci odredjene elemente</h3>
+		<button onclick="mojaFunkcija13()">Klikni me</button>
+		<div id="demo13"></div>				
+							
+							<!--funkcija u JS se pise
+									function mojaFunkcija13(){
+										var voce=["Banana", "Orange", "Lemon", "Apple", "Mango"];
+										var povrce=["Grasak", "Krompir", "Sangarepa", "Celer"];
+										var vocePovrce=voce.concat(povrce);
+										var izuciElement=vocePovrce.slice(2,7);
+										document.getElementById("demo13").innerHTML=izuciElement;
+										
+									}
+							-->
+	<hr><!-- /Spoj 2 niza i iz spojenog niza izvuci odredjene elemente------------------------------>
+	
+	<!--FUNKCIJA -->
+		<h3>Ovaj primer poziva FUNKCIJU iz js eksternog fajla,izracunava i vrati rezultat u html </h3>
+		<h5>Nacini pisanja , kombinacije fja:</h5>
+		<button onclick="document.getElementById('demo').innerHTML=mojaFunkcija1(5,9)">Klikni</button>
+		<p id="demo"></p>
+					
+							<!--funkcija u JS se pise
+									function mojaFunkcija1(p1, p2) {
+										return p1 * p2;
+									}
+									
+									----ILI ---->
+									
+		<button onclick= "vrati_rezultat(1,5)">Klikni</button>
+		<p id="demoA"></p>
+									<!--
+									function mojaFunkcija2(p1, p2) {
+										return p1 * p2;
+									}
+									function vrati_rezultat(p1,p2){
+										document.getElementById("demoA").innerHTML = mojaFunkcija2(p1, p2);
+									
+									}
+	
+									--ILI-->
+									
+		<button onclick= "Maja(3,5)">Klikni</button>
+		<p id="demoB"></p>	
+								<!--
+								function Maja(p1,p2){
+									document.getElementById("demoB").innerHTML = p1*p2;
+								}	
+								}	
+								-->
+								
+			<button  onclick= "Maja2()">Klikni</button> <!--dodavanje parametara fji je opciono, ovde ga nema-->
+			<p id="demoC"></p>	
+								<!--
+								function Maja2(){
+									var p1=5, p2=6;
+									document.getElementById("demoC").innerHTML = p1*p2;
+								}					
+												
+								-->
+
+									
+									
+									
+									
+			
+	<hr><!-- /FUNKCIJA------------------------------>
+	
+	
+	<!--FORMA-->
+		<h3>FORMA </h3>
+			<form>
+				1st Number : <input type="text" id="firstNumber" /><br>
+				2nd Number: <input type="text" id="secondNumber" /><br>
+				<input type="button" onClick="multiplyBy()" Value="Multiply" />
+				<input type="button" onClick="divideBy()" Value="Divide" /> 
+			</form>
+
+			<p>The Result is : <br> <span id = "result"></span></p>
+								<!--
+									function multiplyBy() {
+										num1 = document.getElementById("firstNumber").value;
+										num2 = document.getElementById("secondNumber").value; 
+										document.getElementById("result").innerHTML = num1 * num2;
+									}
+									function divideBy() { 
+										num1 = document.getElementById("firstNumber").value;
+										num2 = document.getElementById("secondNumber").value;
+										document.getElementById("result").innerHTML = num1 / num2;
+									}
+	
+								-->	
+	<hr><!-- /FORMA------------------------------>
+
+	<!--Iz niza izvuci neke odredjene elemente Izvuci element "Volvo"-->
+			<h3> Izvuci element "Volvo" iz niza automobila cars=["Saab","Volvo","BMW"]</h3>
+			<button onclick="mojaFunkcija3()">Klikni me</button>
+			<div id="demo3"></div>					
+								<!--funkcija u JS se pise
+										function mojaFunkcija3(){
+										var cars=["Saab","Volvo","BMW"];
+										var x=cars[1];
+										document.getElementById("demo3").innerHTML=x;											
+										}
+								-->
+		<hr><!-- /Iz niza izvuci neke odredjene elemente Izvuci element "Volvo"--------------------------------------->
+
+	<!--Iz niza promeni prvi element da bude "Ford"-->
+				<h3> Iz niza cars=["Saab","Volvo","BMW"] promeni prvi element da bude "Ford"</h3>
+				<button onclick="mojaFunkcija4()">Klikni me</button>
+				<div id="demo4"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija4(){
+											var cars=["Saab","Volvo","BMW"];
+											cars[0]="Ford";
+											document.getElementById("demo4").innerHTML=cars;											
+											}
+									-->
+			<hr><!-- /Iz niza promeni prvi element da bude "Ford"------------------------------------->
+
+
+	<!--U alertu brojcano ispisi iz koliko se clanova niza sastoji zadati niz "cars"-->
+				<h3> U alertu brojcano ispisi iz koliko se clanova niza sastoji zadati niz "cars"<BR>cars=["Saab","Volvo","BMW","Mercedes"]</h3>
+				<button onclick="mojaFunkcija5()">Klikni me</button>
+				<div id="demo5"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija5(){
+											var cars=["Saab","Volvo","BMW","Mercedes"];
+											alert(cars.length);
+											--ili ako neces u alertu--
+											var cars=["Saab","Volvo","BMW"];
+											var x=cars.length;
+											document.getElementById("demo5").innerHTML=x;											
+											}
+									-->
+			<hr><!-- /U alertu brojcano ispisi iz koliko se clanova niza sastoji zadati niz "cars"--------------------------->
+
+
+	<!--U nizu"Vocke", izbaci poslednji element niza-->
+				<h3> U nizu "Vocke", izbaci poslednji element niza<br>vocke=["jabuka","banana","kivi","kruska"]</h3>
+				<h5>F-ja pop() se koristida se izbaci poslednji element niza</h5>
+				<h5>a da izbacimo prvi element niza koristimo shift()</h5>
+				<h5>a da dodamo element niza koristimo push()</h5>
+				<button onclick="mojaFunkcija6()">Klikni me</button>
+				<div id="demo6"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija6(){
+											var vocke=["jabuka","banana","kivi","kruska"];
+											vocke.pop();
+											alert(vocke);
+											--ili ako neces u alertu--
+											document.getElementById("demo6").innerHTML=vocke;											
+											}
+									-->
+			<hr><!-- /U nizu"Vocke", izbaci poslednji element niza--------------------------->
+
+	<!--Iz niza obrisi uz pomoc SPLICE metoda neke odredjene elemente-->
+		<h3>Iz niza "Banana", "Orange", "Lemon", "Apple", "Mango"<BR>izvuci uz pomoc SPLICE metoda neke odredjene elemente(1,3)</h3>
+		<button onclick="mojaFunkcija7()">Klikni me</button>
+		<div id="demo7"></div>					
+							<!--funkcija u JS se pise
+									function mojaFunkcija7(){
+										 var voce = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+										 var x = voce.splice(1, 3);
+										 document.getElementById("demo7").innerHTML = x;	
+									}
+							-->
+	<hr><!-- /Iz niza obrisi uz pomoc SPLICE metoda neke odredjene elemente--------------------------------------->
+
+	<!--Iz niza izvuci neke odredjene elemente uz pomoc SLICE -->
+		<h3>Iz niza "Banana", "Orange", "Lemon", "Apple", "Mango"<BR>izvuci uz pomoc SLICE metoda neke odredjene elemente(1,3)</h3>
+		<button onclick="mojaFunkcija7a()">Klikni me</button>
+		<div id="demo7a"></div>					
+							<!--funkcija u JS se pise
+									function mojaFunkcija7a(){
+										 var voce = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+										 var citrus = voce.slice(1, 3);
+										 document.getElementById("demo7a").innerHTML = citrus;	
+									}
+							-->
+	<hr><!-- /Iz niza izvuci neke odredjene elemente uz pomoc SLICE-------------------------------------->
+
+
+
+	<!--U nizu"Vocke", poredjaj elemente niza po abecedi-->
+				<h3> U nizu"Vocke", poredjaj elemente niza po abecedi</h3>
+				<button onclick="mojaFunkcija8()">Klikni me</button>
+				<div id="demo8"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija8(){
+											var vocke=["jabuka","banana","kivi","kruska","papaja","ananas","tresnja","mango"];
+											vocke.sort();
+											alert(vocke);
+											--ili ako neces u alertu--
+											document.getElementById("demo8").innerHTML=vocke;											
+											}
+									-->
+			<hr><!-- /U nizu"Vocke", poredjaj elemente niza po abecedi---------------------------->
+
+
+	<!--U alertu napravi datum-->
+				<h3> U alertu napravi datum</h3>
+				<button onclick="mojaFunkcija9()">Klikni me</button>
+				<div id="demo9"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija9(){
+											var x = new Date();
+											alert(x);
+											--ili ako neces u alertu--
+											document.getElementById("demo9").innerHTML=x;											
+											}
+									-->
+			<hr><!-- /U alertu napravi datum---------------------------->
+
+	<!--U alertu napravi da godina ima 4 cifre-->
+				<h3> U alertu napravi da godina ima 4 cifre</h3>
+				<button onclick="mojaFunkcija10()">Klikni me</button>
+				<div id="demo10"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija10(){
+											var x = new Date();
+											year = x.getFullYear(); 
+											alert(year);
+											--ili ako neces u alertu--
+											document.getElementById("demo10").innerHTML=year;											
+											}
+									-->
+			<hr><!-- /U alertu napravi da godina ima 4 cifre---------------------------->
+
+	<!--U alertu napravi da godina ima 4 cifre i meseci do cifre 12-->
+				<h3> U alertu napravi da godina ima 4 cifre i meseci do cifre 12</h3>
+				<button onclick="mojaFunkcija11()">Klikni me</button>
+				<div id="demo11"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija11(){
+											var x = new Date();
+											year = x.getFullYear(); 
+											month= x.getMonth();
+											alert(month);
+											--ili ako neces u alertu--
+											document.getElementById("demo11").innerHTML=month;											
+											}
+									-->
+			<hr><!-- /U alertu napravi da godina ima 4 cifre i meseci do cifre 12---------------------------->
+	
+	<!--IF-->
+				<h3>--IF-- <br> U alertu napravi da ispisuje "Hello World" ako je x>y<br>var x=15, y=2; </h3>
+				<button onclick="mojaFunkcija12()">Klikni me</button>
+				<div id="demo12"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija12(){
+											var x=15, y=2;
+												if (x > y) {
+												alert("Hello World");
+												}
+												
+											--ili ako neces u alertu--
+											document.getElementById("demo12").innerHTML="Hello World";											
+											}
+									-->
+			<hr><!-- /IF---------------------------->
+
+
+	<!--IF-->
+				<h3>--IF-- <br> Napravi da ispisuje "Hello World" ako je x>y a ako nije onda napisi"Goodbye"</h3>
+				<button onclick="mojaFunkcija14()">Klikni me</button>
+				<div id="demo14"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija14(){
+											var x=15, y=2;
+												if (x > y) {
+												alert("Hello World");
+												}
+												else {
+												alert("Goodbye");
+												}
+											}	
+											--ili ako neces u alertu--
+											document.getElementById("demo14").innerHTML="Hello World";											
+												function mojaFunkcija14(){
+												var x=15, y=2;
+													if (x > y) {
+													pozdrav="Hello World";
+													}
+													else {
+													pozdrav="Goodbye";
+													}
+												document.getElementById('demo14').innerHTML=pozdrav;	
+												}
+									
+									-->
+									
+			<hr><!-- /IF---------------------------->
+			
+	<!--SWITCH-->		
+			<h3>--SWITCH-- <br> Napravi switch da ispisuje  "Hello " ako je voce "banana" i "Welcome"ako je voce "jabuka"</h3>
+			
+			<button onclick="mojaFunkcija15()">Klikni me</button>
+				<div id="demo15"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija15(){
+												var voce='Jabuka';
+													switch (voce) { 
+														case "Banana": alert("Hello");
+														break;  
+														case "Jabuka": alert("Welcome");
+														break;    
+													}
+											}		
+																												
+																			
+											--ili ako neces u alertu--
+																				
+											function mojaFunkcija15(){
+												var voce='Jabuka';
+													switch (voce) { 
+														case "Banana": tekst="Hello Bananna";
+														break;  
+														case "Jabuka": tekst="Welcome Jabuka";
+														break;    
+													}	
+												document.getElementById("demo15").innerHTML = tekst;										
+											}
+									
+									-->			
+	<hr><!-- /SWITCH---------------------------->		
+		
+	<!--SWITCH-->		
+			<h3>--SWITCH-- <br> Napravi switch da  ispisuje "Neither" ako  voce nije ni "banana" ni "jabuka"</h3>
+			
+			<button onclick="mojaFunkcija16()">Klikni me</button>
+				<div id="demo16"></div>					
+									<!--funkcija u JS se pise
+											function mojaFunkcija16(){
+												var voce='Kruska';
+													switch (voce) { 
+														case "Banana": alert("Hello");
+														break;  
+														case "Jabuka": alert("Welcome");
+														default: alert("Neither-Nije ni Jabuka ni Banana");
+														break;    
+													}
+											}		
+																												
+																			
+											--ili ako neces u alertu--
+																				
+											function mojaFunkcija16(){
+												var voce='Kruska';
+													switch (voce) { 
+														case "Banana": tekst="Hello Bananna";
+														break;  
+														case "Jabuka": tekst="Welcome Jabuka";
+														break;
+														default: tekst="Neither-Nije ni Jabuka ni Banana";
+													}	
+												document.getElementById("demo16").innerHTML = tekst;										
+											}
+									
+									-->			
+	<hr><!-- /SWITCH---------------------------->		
+
+
+	<!--FOR PETLJA-->
+			<h3>--FOR PETLJA-- <br>Napravi FOR PETLJU koja se krece od 0 do 9 </h3>
+			<button onclick="mojaFunkcija17()">Klikni me</button>
+				<div id="demo17"></div>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija17(){
+												var i;
+												for (i = 0; i < 10; i++) { 
+													console.log(i);
+												}
+											document.getElementById("demo17").innerHTML = i;
+											}
+									-->			
+	<hr><!-- /FOR PETLJA---------------------------->	
+
+	<!--FOR PETLJA-->
+			<h3>--FOR PETLJA-- <br>Napravi FOR PETLJU koja se krece kroz ceo niz voce=['Apple','Banana','Orange', 'Kruska','Mango', 'Kivi']; </h3>
+			<button onclick="mojaFunkcija18()">Klikni me</button>
+				<div id="demo18"></div>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija18(){
+												var voce =['Apple','Banana','Orange', 'Kruska','Mango', 'Kivi'];
+												for (x in voce) { 
+													console.log(x);
+												}
+											document.getElementById("demo18").innerHTML = x;
+											}
+									-->			
+	<hr><!-- /FOR PETLJA---------------------------->
+
+	
+	
+	<!--WHILE PETLJA-->
+			<h3>--WHILE PETLJA-- <br>Napravi WHILE PETLJU dok god je i<10 </h3>
+			<button onclick="mojaFunkcija19()">Klikni me</button>
+				<div id="demo19"></div>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija19(){
+												var i=0;
+												while(i<10) {
+													console.log(i);
+													i++
+												}
+												
+											document.getElementById("demo19").innerHTML = i;
+											}
+									-->			
+	<hr><!-- /WHILE PETLJA---------------------------->
+	
+	
+	<!--WHILE PETLJA-->
+			<h3>--WHILE PETLJA-- <br>Napravi WHILE PETLJU dok god je i<10 ali povecava i za 2 svaki put </h3>
+			<button onclick="mojaFunkcija20()">Klikni me</button>
+				<div id="demo20"></div>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija20(){
+												var i=0;
+												while(i<10) {
+													console.log(i);
+													i=i+2;
+												}
+												
+											document.getElementById("demo20").innerHTML = i;
+											}
+									-->			
+	<hr><!-- /WHILE PETLJA---------------------------->
+	
+	<!--FOR PETLJA-->
+			<h3>--FOR PETLJA-- <br>Da stane brojac koji je i<10, da stane kad dodje do broja 5 </h3>
+			<button onclick="mojaFunkcija21()">Klikni me</button>
+				<div id="demo21"></div>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija21(){
+												for (i = 0; i < 10; i++) {
+														console.log(i); 
+													if (i == 5) { 
+														break;	
+													}
+												}
+											document.getElementById("demo21").innerHTML = i;
+											}
+									-->			
+	<hr><!-- /FOR PETLJA---------------------------->
+	
+	
+	<!--FOR PETLJA-->
+			<h3>--FOR PETLJA-- <br>Da brojac koji je i<10, da nastavi sa sledecom iteracijom kad dodje do broja 5 </h3>
+			<button onclick="mojaFunkcija22()">Klikni me</button>
+				<div id="demo22"></div>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija22(){
+												for (i = 0; i < 10; i++) {
+														if (i == 5) { 
+														continue;	
+													}
+													console.log(i);
+												}
+											document.getElementById("demo22").innerHTML = i;
+											}
+									-->			
+	<hr><!-- /FOR PETLJA---------------------------->
+	
+	
+	
+	<!--Koristeci getElementById method nadji <p> element, i promeni njegov tekst u "Hello“-->
+			<h3>Koristeci getElementById method nadji p element, i promeni njegov ceo tekst  u "Hello" </h3>
+			<button onclick="mojaFunkcija23()">Klikni me</button>
+				<p id="demo23">Ovo je neki pasos p koji ce se promeniti u "Hello"</p>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija23(){
+												document.getElementById("demo23").innerHTML = "Hello";
+											}
+									-->			
+	<hr><!-- /Koristeci getElementById method nadji <p> element, i promeni njegov tekst u "Hello“---------------------------->
+	
+	
+NE RADI!!!!!!!!!
+	<!--Koristeci getElementById method nadji u pasosu p prvi element, i promeni njegov tekst u "Hello“-->
+			<h3>Koristeci getElementById method nadji u pasosu p prvi element, i promeni njegov tekst u "Hello“ </h3>
+			<button onclick="mojaFunkcija24()">Klikni me</button>
+				<p>Prvi, Drugi, Treci, Cetvrti element u recenici</p>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija24(){
+												document.getElementsByTagName("p")[0].innerHTML = "Hello";
+
+											}
+									-->			
+	<hr><!-- /Koristeci getElementById method nadji u pasosu p prvi element, i promeni njegov tekst u "Hello“---------------------------->
+	
+
+	<!--KLASA Promeni tekst prvog elementa cija se klasa zove "test"-->
+			<h3> KLASA-Promeni tekst prvog elementa cija se klasa zove "test"</h3>
+			<button onclick="mojaFunkcija25()">Klikni me</button>
+			<p class="test">Ovaj tekst ce se promeniti u "Hello"a klasa se zove"test"</p>					
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija25(){
+											document.getElementsByClassName('test')[0].innerHTML='Hello';
+											}
+									-->			
+	<hr><!-- /Promeni tekst prvog elementa cija se klasa zove "test"--------------------------->
+	
+	
+	<!--Koristi HTML DOM da bi promenio fotografiju-->
+			<h3> Koristi HTML DOM da bi promenio fotografiju</h3>
+			<button onclick="mojaFunkcija26()">Klikni me</button>
+			<img id="image" src="img/pic_bulboff.gif"></img>
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija26(){
+											document.getElementById('image').src='img/pic_bulbon.gif';
+											}
+									-->			
+	<hr><!-- /Koristi HTML DOM da bi promenio fotografiju-------------------------->
+	
+   
+	<!--Koristeci HTML DOM promeni vrednost iz Cao svete u Hello World-->
+			<h3> Koristeci HTML DOM promeni vrednost iz "Cao svete!" u "Hello World!"</h3>
+			<button onclick="mojaFunkcija27()">Klikni me</button>
+				 <input type="text" id="myText" value="Cao svete!"/>
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija27(){
+											document.getElementById('myText').value='Hello World!';
+											}
+									-->			
+	<hr><!-- /Koristeci HTML DOM promeni vrednost iz Cao svete u Hello World----------------------->
+
+	<!--Printaj stranu-->
+			<h3> Printaj stranu</h3>
+			<button onclick="mojaFunkcija27a()">Klikni me</button>
+				 
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija27a(){
+											window.print()
+											}
+									-->			
+	<hr><!-- /Printaj stranu----------------------->    
+		
+		
+			
+		
+		
+
+	<!--Koristeci odgovarajucu f-ju napisi random brojeve-->
+			<h3>Koristeci odgovarajucu f-ju napisi RANDOM brojeve u alertu </h3>
+			<button onclick="mojaFunkcija28()">Klikni me</button>
+				
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija28(){
+										var rnd=Math.random();alert(rnd);
+											}
+									-->			
+	<hr><!-- /Koristeci odgovarajucu f-ju napisi random brojeve------------------------>
+	
+	
+	
+	
+	<!--Izvuci MAX broj-->
+			<h3>Izvuci MAX broj </h3>
+			<button onclick="mojaFunkcija29()">Klikni me</button>
+				<div id="demo29"></div>	
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija29(){
+												var x = Math.max(10, 20);
+												document.getElementById("demo29").innerHTML =x;
+											}
+									-->			
+	<hr><!-- /Izvuci MAX broj------------------------>
+	
+	<!--Zaokruzi broj-->
+			<h3>Zaokruzi broj </h3>
+			<button onclick="mojaFunkcija30()">Klikni me</button>
+				<div id="demo30"></div>	
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija30(){
+												var x = Math.round(5.3);
+
+												document.getElementById("demo30").innerHTML =x;
+											}
+									-->			
+	<hr><!-- /Zaokruzi broj------------------------>
+	
+	
+	<!--Kvadratni koren-->
+			<h3>Kvadratni koren </h3>
+			<button onclick="mojaFunkcija31()">Klikni me</button>
+				<div id="demo31"></div>	
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija31(){
+												var x = Math.sqrt(9);
+												document.getElementById("demo31").innerHTML =x;
+											}
+									-->			
+	<hr><!-- /Kvadratni koren------------------------>
+	
+	
+	<!--Boolean-->
+			<h3>U alertu ispisi "tacno " ako je x>y </h3>
+			<button onclick="mojaFunkcija32()">Klikni me</button>
+				<div id="demo32"></div>	
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija32(){
+												var x=10,y=5;
+												alert(x>y)
+												
+											}
+									-->			
+	<hr><!-- /Boolean------------------------>
+	
+	<!--Boolean-->
+			<h3>U alertu ispisi "tacno " ako je x=y </h3>
+			<button onclick="mojaFunkcija33()">Klikni me</button>
+				<div id="demo33"></div>	
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija33(){
+											var x=10,y=10;
+											alert(x==y)
+												
+											}
+									-->			
+	<hr><!-- /Boolean------------------------>
+	
+	
+	<!--Boolean-->
+			<h3>U alertu ispisi "tacno " ako je xnije jednako y </h3>
+			<button onclick="mojaFunkcija34()">Klikni me</button>
+				<div id="demo34"></div>	
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija34(){
+											var x=10,y=5;
+											alert(x!=y)
+												
+											}
+									-->			
+	<hr><!-- /Boolean------------------------>
+	
+	
+	<!--U alertu ispisi "maloletnik " ako je br godina osobe ispod 18, ako osoba ima vise od 18g. onda napisi "punoletan"-->
+			<h3>U alertu ispisi "maloletnik " ako je br godina osobe ispod 18, ako osoba ima vise od 18g. onda napisi "punoletan"</h3>
+			<button onclick="mojaFunkcija35()">Klikni me</button>
+				<div id="demo35"></div>	
+
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija35(){
+											var age=5;
+											var can_vote=(age<18)?"maloletnik":"punoletan";
+											alert(can_vote);
+												
+											}
+									-->			
+	<hr><!-- /U alertu ispisi "maloletnik " ako je br godina osobe ispod 18, ako osoba ima vise od 18g. onda napisi "punoletan"----------------------->
+	
+	<!--Ispisi datum i vreme u odredjenom formatu-->
+			<h3>Ispisi datum i vreme u odredjenom formatu:<br>Today is: Wednesday <br>Current time is : 17 PM : 30 : 38 </h3>
+			<button onclick="document.getElementById('demo36').innerHTML=mojaFunkcija36()">Klikni me</button>
+				<p id="demo36">Ovde ce se prikazati vreme i datum</p>	
+
+  
+			
+    
+
+									<!--<!--funkcija u JS se pise
+											function mojaFunkcija36(){
+											document.getElementById("demo36").innerHTML=mojaFunkcija36();
+												
+											}
+									-->			
+	<hr><!-- /Ispisi datum i vreme u odredjenom formatu------------------------>
+	
+
+	
+</body>
+</html>
